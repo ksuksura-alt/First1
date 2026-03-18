@@ -1,30 +1,26 @@
 <?php
-class UserController extends UserController
-{
-public function show()
-{
-return view('user.show', [
-'name' => 'Ксения',
-'surname' => 'Радионова',
-'title' => 'Профиль пользователя',
-'content' => 'Информация о пользователе'
-]);
-}
 
-public function create()
-{
-return view('user.create', [
-'title' => 'Создание пользователя',
-'content' => 'Форма создания нового пользователя'
-]);
-}
+namespace App\Http\Controllers;
 
-public function edit()
+class UserController extends Controller
 {
-return view('user.edit', [
-'title' => 'Редактирование профиля',
-'content' => 'Форма редактирования профиля'
-]);
+    public function show()
+    {
+        return["Страница пользователя"];
+    }
+
+    public function all()
+    {
+        return[ "Список всех пользователей"];
+    }
+
+    public function showByName($name)
+    {
+        return[ "Пользователь: " . $name];
+    }
+
+    public function showByFullName($surname, $name)
+    {
+        return[ "Пользователь: $surname $name"];
+    }
 }
-}
-?>

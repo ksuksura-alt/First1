@@ -1,10 +1,10 @@
  <?php
 use App\Http\Controllers\UserController;
 
-Route::get('/user', [Controller::class, 'show']);
-Route::get('/user/all', [Controller::class, 'all']);
-Route::get('/user/{name}', [Controller::class, 'showByName']);
-Route::get('/user/{surname}/{name}', [Controller::class, 'showByFullName']);
+Route::get('/user', [UserController::class, 'show']);
+Route::get('/user/all', [UserController::class, 'all']);
+Route::get('/user/{name}', [UserController::class, 'showByName']);
+Route::get('/user/{surname}/{name}', [UserController::class, 'showByFullName']);
 
 $users = [
     'user1' => 'city1',
