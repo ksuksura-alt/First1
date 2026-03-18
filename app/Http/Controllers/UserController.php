@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 class UserController extends Controller
@@ -7,20 +8,19 @@ class UserController extends Controller
     {
         return "Страница пользователя";
     }
-    
+
     public function all()
     {
         return "Список всех пользователей";
     }
-    
+
     public function showByName($name)
     {
         return "Пользователь: " . $name;
     }
-    
+
     public function showByFullName($surname, $name)
     {
         return "Пользователь: $surname $name";
     }
 }
-?>
