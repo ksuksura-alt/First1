@@ -1,20 +1,13 @@
  <?php
 use App\Http\Controllers\UserController;
 
+Route::get('/all/user', [UserController::class, 'all']);
 Route::get('/user', [UserController::class, 'show']);
-Route::get('/user/all', [UserController::class, 'all']);
-Route::get('/user/{name}', [UserController::class, 'showByName']);
-Route::get('/user/{surname}/{name}', [UserController::class, 'showByFullName']);
+Route::get('{name}/user', [UserController::class, 'showByName']);
+Route::get('/{surname}/{name}/user', [UserController::class, 'showByFullName']);
 
-$users = [
-    'user1' => 'city1',
-    'user2' => 'city2',
-    'user3' => 'city3',
-    'user4' => 'city4',
-    'user5' => 'city5',
-];
 
-Route::get('/user/{username}', function($username) use ($users) {
+Route::get('/{username}/user', function($username) use ($users) {
     if (array_key_exists($username, $users)) {
         return "Город пользователя: " . $users[$username];
     } else {
