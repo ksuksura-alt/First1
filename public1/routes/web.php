@@ -9,3 +9,6 @@ Route::get('/workday', 'DayController@showWorkday');
 Route::get('/season', 'SeasonController@showSeason');
 Route::get('/check', 'AgeController@showAge');
 Route::get('/array', 'ArrayController@showArray');
+
+Route::get('/list', [ListController::class, 'showList']);
+Route::get('/data-check', [DataController::class, 'showData']);
