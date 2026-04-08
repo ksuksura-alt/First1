@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 class UserController extends Controller
-{
+{/*
     public function show()
     {
         return["Страница пользователя"];
@@ -33,10 +33,11 @@ class UserController extends Controller
     'user4' => 'city4',
     'user5' => 'city5',];
 
-        if (array_key_exists($username, $users)) {
-        return "Город пользователя: " . $users[$username];
-    } else {
+    if (array_key_exists($username, $users)) {
+        return "Город пользователя: " . $users[$username]; }
+    else {
         return "Пользователь не найден";
     }
-    }
+    }*/
+   return view('class_example', ['cssClass' => 'highlight']); 
 }

@@ -1,18 +1,35 @@
  <?php
-use App\Http\Controllers\UserController;
+use App\Http\Controllers;
+use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 Route::get('/all/user', [UserController::class, 'all']);
 Route::get('/user', [UserController::class, 'show']);
 Route::get('{name}/user', [UserController::class, 'showByName']);
 Route::get('/{surname}/{name}/user', [UserController::class, 'showByFullName']);
+Route::get('/season', 'SeasonController@showSeason');
+Route::get('/check', 'AgeController@showAge');
+Route::get('/array', 'ArrayController@showArray');
+
+Route::get('/list', [ListController::class, 'showList']);
+
+Route::get('/{name}/{age}/{salary}/user', [BladeController::class, 'user']);
+//laba5
+// Для первой задачи
+Route::get('/user-info', [UserController::class, 'showUserInfo']);
+
+// Для второй задачи
+Route::get('/styled-element', [StyleController::class, 'showStyledElement']);
+
+// Для третьей задачи
+Route::get('/inputs', [InputController::class, 'showInputs']);
+
+// Для четвертой задачи
+Route::get('/styled-paragraph', [StyleController::class, 'showStyledParagraph']);
+
+// Для пятой задачи
+Route::get('/link', [LinkController::class, 'showLink']);
 
 
-Route::get('/{username}/user', function($username) use ($users) {
-    if (array_key_exists($username, $users)) {
-        return "Город пользователя: " . $users[$username];
-    } else {
-        return "Пользователь не найден";
-    }
-});
 
 ?>
