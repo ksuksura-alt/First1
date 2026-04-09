@@ -19,7 +19,7 @@ Route::get('/{name}/{age}/{salary}/user', [BladeController::class, 'user']);
 Route::get('/user-info', [UserController::class, 'showUserInfo']);
 
 // Для второй задачи
-Route::get('/styled-element', [StyleController::class, 'showStyledElement']);
+Route::get('/styled-element', [Controller::class, 'showStyledElement']);
 
 // Для третьей задачи
 Route::get('/inputs', [InputController::class, 'showInputs']);
@@ -30,6 +30,9 @@ Route::get('/styled-paragraph', [StyleController::class, 'showStyledParagraph'])
 // Для пятой задачи
 Route::get('/link', [LinkController::class, 'showLink']);
 
+Route::get('/day_today', [DayController::class, 'showday_today']);*****
 
+Route::get('/key', [KeyController::class, 'showKey']);*****
 
+masive
 ?>
