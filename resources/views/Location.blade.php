@@ -1,3 +1,3 @@
-@foreach ($arr as $counry => $elem)
-	{{ $country }} {{ $elem }}
+@foreach ($ as $counry => $city)
+	{{ $country }} {{ $city }}
 @endforeach

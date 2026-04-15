@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 class CityController extends Controller
 {
+        public function showCity()
+    {
     return view('city', [
     '$city' => 'Омск',
 ]);
