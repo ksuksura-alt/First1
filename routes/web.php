@@ -46,5 +46,4 @@ Route::get('/key', [CityController::class, 'showCity']);
 
 //Для десятой задачи
 Route::get('/key', [LocationController::class, 'showLocation']);
-masive
     ?>
