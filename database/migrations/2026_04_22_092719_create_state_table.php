@@ -11,9 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('state', function (Blueprint $table) {
-            $table->id();
+        Schema::table('state', function (Blueprint $table) {
+            $table->id('title', 50);
             $table->timestamps();
+            $table->string('heading',20);
+            $table->text('text');
+            $table->date('created_at');
         });
     }
 
