@@ -9,11 +9,12 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB; 
 use Illuminate\Support\Facades\Hash;
 
-class DatabaseSeeder extends Seeder
+class PostsSeeder extends Seeder
 {
     public function run()
     {
         [
+            
 				'title' => Str::random(10),
 				'slug'  => Str::random(10),
 				'text'  => Str::random(50),
