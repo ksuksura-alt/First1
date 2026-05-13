@@ -1,44 +1,34 @@
-<?php
+9<?php
 
+use Illuminate\Support\Facades\DB; 
 namespace App\Http\Controllers;
 
 class UserController extends Controller
 {
     public function show()
     {
-        /*  return["Страница пользователя"];
-      }
+      $query = DB::table('posts')->where('id', '!=', 3)->toSql();
+      dump($query);
 
-      public function all()
-      {
-          return[ "Список всех пользователей"];
-      }
+      $posts = DB::table('posts')->get();
+			foreach ($users as $user) {
+				dump($user);
+			}
 
-      public function showByName($name)
-      {
-          return[ "Пользователь: " . $name];
-      }
+       return view('user.show', ['users' => $users]);
 
-      public function showByFullName($surname, $name)
-      {
-          return[ "Пользователь: $surname $name"];
-      }
+       $users = DB::table('users')->where('age''=' 30)->get();//8
+       $users = DB::table('users')->where('age''!=' 30)->get();//9
+       $users = DB::table('users')->where('age''>' 30)->get();//10
+       $users = DB::table('users')->where('age''<' 30)->get();//11
 
-      public function cite($username, $users):
-      {
-          $users = [
-      'user1' => 'city1',
-      'user2' => 'city2',
-      'user3' => 'city3',
-      'user4' => 'city4',
-      'user5' => 'city5',];
+       $users = DB::table('users')->where('age''<' 30)
+       orwhere('age''=' 30)->get();//12
 
-      if (array_key_exists($username, $users)) {
-          return "Город пользователя: " . $users[$username]; }
-      else {
-          return "Пользователь не найден";
-      }
-      }*/
-        return view('class_example', ['cssClass' => 'highlight']);
+        $users = DB::table('users')->where('age''>' 20)
+        where('age''<' 30)->get();//13
+       
     }
 }
+
+?>

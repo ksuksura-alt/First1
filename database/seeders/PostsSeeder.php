@@ -13,12 +13,11 @@ class PostsSeeder extends Seeder
 {
     public function run()
     {
-        [
-            
+         DB::table('posts')->insert([
 				'title' => Str::random(10),
 				'slug'  => Str::random(10),
-				'text'  => Str::random(50),
-		]
+				'likes'  => rand(0,1000),
+		 ]); 
+	}
     }
-}
 ?>

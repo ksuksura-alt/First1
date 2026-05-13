@@ -17,15 +17,12 @@ class UsersSeeder extends Seeder
         DB::table('users')->insert([
             'name' => Str::random(5),
 			'email' => Str::random(5).'@mail.ru',
-           // 'age'=> ,
-           // 'salary'=>,
+            'age'=> rand(18,90),
+            'salary'=> rand(15000,60000),
 			'password' => Hash::make('123'),
-           // 'created_at'=>,
-           // 'updated_at'=>,
 
         ]); 
 	}
     }
     //php artisan db:seed --class=UsersSeeder в командную строку
 ?>
-
