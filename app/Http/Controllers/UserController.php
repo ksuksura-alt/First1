@@ -1,4 +1,4 @@
-9<?php
+<?php
 
 use Illuminate\Support\Facades\DB; 
 namespace App\Http\Controllers;
